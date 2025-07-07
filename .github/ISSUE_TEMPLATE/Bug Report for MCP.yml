@@ -13,7 +13,7 @@ body:
       label: Basic Information - Models Used
       description: |
         Please list the model used, e.g., MiniMax-M1, speech-02-hd, etc.
-        Our models can be referred at <https://huggingface.co/MiniMaxAI> and <https://www.minimax.io/platform_overview>.
+        Our models can be referred at [HuggingFace](https://huggingface.co/MiniMaxAI) or [the official site](https://www.minimax.io/platform_overview).
       placeholder: "ex: MiniMax-M1"
     validations:
       required: true
