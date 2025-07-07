@@ -28,18 +28,10 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     id: scenario-description
     attributes:
       label: Basic Information - Scenario Description
-      description: "Briefly describe the context in which the bug occurred. e.g., \"Attempting to integrate Minimax-M1 as an MCP tool results in an error.\""
-      placeholder: Describe the scenario here.
-    validations:
-      required: true
-
-  - type: input
-    attributes:
-      label: What is the scenario where the problem happened?
       description: | 
         Please briefly describe the scenario, including the framework or the platform, 
       placeholder: "ex: Minimax-M1 cannot be called as MCP tools. "
@@ -51,39 +43,34 @@ body:
     attributes:
       label: Confirmations
       options:
-        - label: "I have thoroughly reviewed and followed the GitHub READMEs for [`Minimax-MCP`](https://github.com/MiniMax-AI/MiniMax-MCP) and [`Minimax-MCP-JS`](https://github.com/MiniMax-AI/MiniMax-MCP-JS)."
+        - label: "I have followed the GitHub READMEs for [`Minimax-MCP`](https://github.com/MiniMax-AI/MiniMax-MCP) and [`Minimax-MCP-JS`](https://github.com/MiniMax-AI/MiniMax-MCP-JS)."
           required: true
-        - label: "I have checked the official Minimax documentation and found no relevant solution."
+        - label: "I have checked the [official Minimax documentation](https://www.minimax.io/platform_overview) and found no solution."
           required: true
         - label: "I have reviewed the relevant framework documentation (if applicable) and found no useful information."
           required: true
-        - label: "I have searched existing GitHub issues and confirmed that this bug has not been reported previously."
+        - label: "I have searched [existing GitHub issues](https://github.com/MiniMax-AI/MiniMax-MCP/issues) and confirmed that this bug has not been reported previously."
           required: true
 
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        ### Environment Details
-        Please provide comprehensive information about your development environment:
-
   - type: textarea
-    id: system-information
     attributes:
-      label: Environment Details - System Information
-      description: "Include details such as your operating system, Python version, relevant software versions, and GPU information if applicable."
-      placeholder: |
-        OS: Ubuntu 22.04 LTS
-        Python: 3.9.18
-        CUDA: 11.8
-        GPU: NVIDIA A100
+      label: Information about environment
+      description: |
+        Please provide information about you environment, 
+        e.g., the software versions and the information on the OS, GPUs, if available.
+        
+        For example:
+        - OS: Ubuntu 24.04
+        - Python: Python 3.11
+        - PyTorch: 2.6.0+cu124 (from `python -c "import troch; print(torch.__version__)"`)
+        
     validations:
       required: true
 
   - type: textarea
     id: python-packages
     attributes:
-      label: Environment Details - Python Packages (`pip list`)
+      label: Information about Python Packages (`pip list`)
       description: "Please paste the complete output of `pip list`."
       render: python
     validations:
@@ -92,9 +79,9 @@ body:
   - type: input
     id: trace-id
     attributes:
-      label: Environment Details - Trace-ID
-      description: "If applicable, please copy and paste the trace-ID of the problematic request."
-      placeholder: "e.g., abcdef1234567890"
+      label: Trace-ID in the request head
+      description: "Please copy and paste the trace-ID of the problematic request."
+      required: true
 
   - type: markdown
     attributes:
