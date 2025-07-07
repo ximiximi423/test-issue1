@@ -8,31 +8,12 @@ body:
       value: |
         Thank you for contributing to our project by reporting a bug! To help us understand and resolve the issue as quickly as possible, please provide the following details.
 
-  - type: dropdown
-    id: models-used
-    attributes:
-      label: Basic Information - Models Used
-      description: "Please select all applicable models."
-      options:
-        - MiniMax-M1
-        - MiniMax-Text-01
-        - speech-02-hd
-        - speech-02-turbo
-        - MiniMax Hailuo 02
-        - T2V-01-Director
-        - I2V-01-Director
-        - S2V-01
-        - music-1.5
-        - music-01
-        - image-01
-    validations:
-      required: true
   - type: input
     attributes:
       label: Basic Information - Models Used
       description: |
         Please list the model used, e.g., MiniMax-M1, speech-02-hd, etc.
-        Note that we maintain models at <https://huggingface.co/MiniMaxAI> and <https://www.minimax.io/platform_overview>.
+        Our models can be referred at <https://huggingface.co/MiniMaxAI> and <https://www.minimax.io/platform_overview>.
       placeholder: "ex: MiniMax-M1"
     validations:
       required: true
