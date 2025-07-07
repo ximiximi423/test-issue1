@@ -81,6 +81,7 @@ body:
     attributes:
       label: Trace-ID in the request head
       description: "Please copy and paste the trace-ID of the problematic request."
+    validations:
       required: true
 
   - type: markdown
