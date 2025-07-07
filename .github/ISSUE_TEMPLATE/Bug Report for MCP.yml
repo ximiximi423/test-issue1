@@ -12,7 +12,7 @@ body:
     id: title
     attributes:
       label: Basic Information - Title
-      description: A concise, descriptive summary of the issue. e.g., `[Bug]: MiniMax-M1 fails to initialize MCP tools`
+      description: A concise, descriptive summary of the issue. e.g., '[Bug]: MiniMax-M1 fails to initialize MCP tools'
       placeholder: "[Bug]: Your concise issue title here"
     validations:
       required: true
