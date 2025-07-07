@@ -59,8 +59,6 @@ body:
       label: Call & Execution Information
       description: |
         Please describe how you are interacting with the model and provide the relevant details in the box below:
-
-        ---
         **Call Type**: (e.g., API Call, Deployment Call)
         **If API Call**: Please provide the `trace-ID` of the problematic request.
         **If Deployment Call**: Please provide the command used for deployment or inference.
@@ -87,14 +85,6 @@ body:
         The bug can be reproduced with the following steps:
         1. ...
         2. ...
-
-        #### Example Input & Output (if applicable)
-        ```
-        # Provide example system/user input and corresponding model output here
-        system: ...
-        user: ...
-        response: ...
-        ```
 
         ### Expected behavior
         The results are expected to be: ...
