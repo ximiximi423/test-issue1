@@ -1,6 +1,6 @@
-name: Bug Report
-description: Report a bug to help us improve the project.
-title: "[Bug]: "
+name: Bug Report for MCP&API
+description: Report a bug related to MCP and API tasks to help us reproduce and fix the problem.
+title: "[Bug for MCP&API]: "
 labels: ["bug", "triage"]
 body:
   - type: markdown
@@ -8,24 +8,23 @@ body:
       value: |
         Thank you for contributing to our project by reporting a bug! To help us understand and resolve the issue as quickly as possible, please provide the following details.
 
-  - type: input
-    id: title
-    attributes:
-      label: Basic Information - Title
-      description: "A concise, descriptive summary of the issue. e.g., '[Bug]: MiniMax-M1 fails to initialize MCP tools'"
-      placeholder: "[Bug]: Your concise issue title here"
-    validations:
-      required: true
-
   - type: dropdown
     id: models-used
     attributes:
       label: Basic Information - Models Used
-      description: "Please select all applicable models. If \"Other,\" please specify in the scenario description."
+      description: "Please select all applicable models."
       options:
         - MiniMax-M1
+        - MiniMax-Text-01
         - speech-02-hd
-        - Other (Specify in Scenario)
+        - speech-02-turbo
+        - MiniMax Hailuo 02
+        - T2V-01-Director
+        - I2V-01-Director
+        - S2V-01
+        - music-1.5
+        - music-01
+        - image-01
     validations:
       required: true
 
