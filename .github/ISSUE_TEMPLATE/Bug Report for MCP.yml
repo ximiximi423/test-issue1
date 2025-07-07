@@ -115,5 +115,7 @@ body:
     attributes:
       label: Description of the Bug - Screenshots
       description: "Please paste any screenshots of the error or unexpected behavior here. You can drag and drop images directly into this field."
+      value: |
+      The screenshots are as belows:
     validations:
       required: false
