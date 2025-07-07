@@ -65,7 +65,7 @@ body:
     attributes:
       label: Description
       description: |
-        Please describe the bug you have encountered when using the MCP tools or API, and paste the screenshots of the error or unexpected behaviour here.
+        Please **describe the bug** you have encountered when using the MCP tools or API, and **paste the screenshots** of the error or unexpected behaviour here.
         The following template is recommended.
         Feel free to modify as you needed.
       value: |
