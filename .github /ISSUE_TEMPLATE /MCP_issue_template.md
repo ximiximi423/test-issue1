@@ -1,6 +1,6 @@
 ---
-name: Bug Report
-about: Report a bug to help us improve the project.
+name: Bug Report of MCP/API problem
+about: Report a bug to help us reproduce and fix the problem.
 title: "[Bug]: "
 labels: ["bug", "triage"]
 ---
