@@ -59,10 +59,10 @@ body:
         Please provide information about you environment, 
         e.g., the software versions and the information on the OS, GPUs, if available.
       placeholder:
-        For example:
+        "For example:
         - OS: Ubuntu 24.04
         - Python: Python 3.11
-        - PyTorch: 2.6.0+cu124 (from `python -c "import troch; print(torch.__version__)"`)
+        - PyTorch: 2.6.0+cu124"
         
     validations:
       required: true
