@@ -1,0 +1,71 @@
+name: Model Inquiry
+description: Ask a question about the open source models.
+title: "[Inquiry]: "
+labels: ["question", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reaching out! Please provide the following details to help us understand and address your inquiry about models.
+
+  ---
+
+  - type: dropdown
+    id: models-used
+    attributes:
+      label: Basic Information - Models Used
+      description: "Please select all applicable models you are inquiring about or used when encountering the bad case."
+      multiple: true # Allows selecting multiple models
+      options:
+        # Text-to-Text Models
+        - abab6-chat
+        - abab6-text
+        - abab5.5-chat
+        - abab5.5-text
+        - abab5-chat
+        - abab5-text
+        - abab6-turbo
+        - abab6-pro
+        - MiniMax-L4 (abab5.5-chat-pro)
+        - MiniMax-L3 (abab5-chat)
+        - MiniMax-L2 (abab5-text)
+        - MiniMax-L1 (abab6-text-pro)
+        - emb-v1 (Embedding)
+        - embedding-01 (Embedding)
+        # Text-to-Image Models
+        - empyrean-2.0-v2
+        - empyrean-1.0
+        # Speech Models
+        - speech-01
+        - speech-02
+        - speech-02-hd
+        - whisper
+        - Other (Please specify details in the Description below) # Keep this for anything not listed
+    validations:
+      required: true # Marked as required due to '***' in your request
+
+  ---
+
+  - type: checkboxes
+    id: problem-validation
+    attributes:
+      label: Is this information known and solvable?
+      options:
+        - label: "I have checked [Minimax documentation](https://www.minimax.io/platform_overview) and found no solution."
+          required: true
+        - label: "I have searched existing issues and found no duplicates."
+          required: true
+
+  ---
+
+  - type: textarea
+    id: detailed-description
+    attributes:
+      label: Description
+      description: "Please describe your question in detail here. If available, please paste relevant screenshots directly into this box."
+      placeholder: |
+        - Your detailed question or issue description.
+        - Relevant context or background information.
+        - (Paste screenshots directly below this text)
+    validations:
+      required: true
