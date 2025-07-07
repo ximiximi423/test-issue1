@@ -37,19 +37,21 @@ body:
     validations:
       required: true
 
-  - type: markdown
+  - type: input
     attributes:
-      value: |
-        ---
-        ### Problem Validation
-        To help us narrow down the cause, please confirm the following:
+      label: What is the scenario where the problem happened?
+      description: | 
+        Please briefly describe the scenario, including the framework or the platform, 
+      placeholder: "ex: Minimax-M1 cannot be called as MCP tools. "
+    validations:
+      required: true
 
   - type: checkboxes
     id: problem-validation
     attributes:
       label: Confirmations
       options:
-        - label: "I have thoroughly reviewed and followed the GitHub READMEs for `Minimax-MCP` and `Minimax-MCP-JS`."
+        - label: "I have thoroughly reviewed and followed the GitHub READMEs for [`Minimax-MCP`](https://github.com/MiniMax-AI/MiniMax-MCP) and [`Minimax-MCP-JS`](https://github.com/MiniMax-AI/MiniMax-MCP-JS)."
           required: true
         - label: "I have checked the official Minimax documentation and found no relevant solution."
           required: true
