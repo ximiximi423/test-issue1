@@ -1,23 +1,21 @@
 name: Bad Case Report
-description: Report a bug related to MCP and API tasks to help us reproduce and fix the problem.
-title: "[BadCase]: "
+description: Report a bug related to the model to help us reproduce and fix the problem.
+title: "[BadCase about the model]: "
 labels: ["bug", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for contributing to our project by reporting a bug! To help us understand and resolve the issue as quickly as possible, please provide the following details.
-
-  ---
+        Thank you for contributing to our project by reporting a bad case! To help us understand and resolve the issue as quickly as possible, please provide the following details.
 
   - type: input
-    id: models-used # Added ID for clarity
+    id: models-used
     attributes:
       label: Basic Information - Models Used
       description: |
         Please list the model used, e.g., MiniMax-M1, speech-02-hd, etc.
         (Note: You can refer to our models at [HuggingFace](https://huggingface.co/MiniMaxAI) or [the official site](https://www.minimax.io/platform_overview) for more details.)
-      placeholder: "ex: MiniMax-M1，speech-02-hd"
+      placeholder: "ex: MiniMax-M1"
     validations:
       required: true
 
@@ -31,22 +29,18 @@ body:
     validations:
       required: false
 
-  ---
-
   - type: checkboxes
     id: problem-validation
     attributes:
       label: Is this badcase known and solvable?
       options:
-        - label: "I have followed the GitHub README of the model and found no duplicates in existing issues."
+        - label: "I have followed the [GitHub README](https://github.com/MiniMax-AI) of the model and found no duplicates in existing issues."
           required: true
-        - label: "I have checked Minimax documentation and found no solution."
+        - label: "I have checked [Minimax documentation](https://www.minimax.io/platform_overview) and found no solution."
           required: true
-
-  ---
-
+          
   - type: textarea
-    id: environment-info # Added ID for clarity
+    id: environment-info
     attributes:
       label: Information about environment
       description: |
@@ -78,9 +72,8 @@ body:
         # Example for Deployment Call:
         Call Type: Deployment Call
         Deployment Command: python run_inference.py --model my_model --config config.yaml
-      render: bash # Renders content with basic syntax highlighting (useful for commands)
     validations:
-      required: true # Making this required as it's critical information
+      required: true
 
   ---
 
@@ -89,7 +82,7 @@ body:
     attributes:
       label: Description
       description: |
-        Please **describe the bug** you have encountered.
+        Please **describe the bad case** you have encountered and **paste the screenshots** if available.
         The following template is recommended (modify as needed):
       value: |
         ### Steps to reproduce
@@ -114,15 +107,7 @@ body:
         ### Error logs
         The error logs are as follows:
         ```
-        # Paste error logs here
+        # Paste the related screenshots here
         ```
-    validations:
-      required: true
-
-  - type: textarea
-    id: screenshots # Dedicated field for screenshots
-    attributes:
-      label: Screenshots
-      description: "Please paste the screenshots of the related information here."
     validations:
       required: true
