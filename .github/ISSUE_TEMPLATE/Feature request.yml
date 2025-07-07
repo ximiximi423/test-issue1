@@ -8,8 +8,6 @@ body:
       value: |
         Thank you for suggesting a new feature! Please provide the following details to help us understand your proposal.
 
-  ---
-
   - type: input
     id: feature-about
     attributes:
@@ -18,8 +16,6 @@ body:
       placeholder: "e.g., support Minimax-M1 in Ollama."
     validations:
       required: true 
-
-  ---
 
   - type: textarea
     id: proposal
