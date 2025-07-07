@@ -35,11 +35,7 @@ body:
       options:
         - label: "I have followed the GitHub READMEs for [`Minimax-MCP`](https://github.com/MiniMax-AI/MiniMax-MCP) and [`Minimax-MCP-JS`](https://github.com/MiniMax-AI/MiniMax-MCP-JS)."
           required: true
-        - label: "I have checked the [official Minimax documentation](https://www.minimax.io/platform_overview) and found no solution."
-          required: true
-        - label: "I have reviewed the relevant framework documentation (if applicable) and found no useful information."
-          required: true
-        - label: "I have searched [existing GitHub issues](https://github.com/MiniMax-AI/MiniMax-MCP/issues) and confirmed that this bug has not been reported previously."
+        - label: "I have checked the [official Minimax documentation](https://www.minimax.io/platform_overview) and [existing GitHub issues](https://github.com/MiniMax-AI/MiniMax-MCP/issues)，but found no solution."
           required: true
 
   - type: textarea
@@ -47,22 +43,13 @@ body:
       label: Information about environment
       description: |
         Please provide information about you environment, 
-        e.g., the software versions and the information on the OS, GPUs, if available.
+        e.g., the software versions and the information on the OS, GPUs, python packages(from pip list) if available.
       placeholder:
         "For example:
         - OS: Ubuntu 24.04
         - Python: Python 3.11
         - PyTorch: 2.6.0+cu124"
         
-    validations:
-      required: true
-
-  - type: textarea
-    id: python-packages
-    attributes:
-      label: Information about Python Packages (`pip list`)
-      description: "Please paste the complete output of `pip list`."
-      render: python
     validations:
       required: true
 
@@ -78,7 +65,7 @@ body:
     attributes:
       label: Description
       description: |
-        Please describe the bug you have encountered when using the MCP tools or API.
+        Please describe the bug you have encountered when using the MCP tools or API, and paste the screenshots of the error or unexpected behaviour here.
         The following template is recommended.
         Feel free to modify as you needed.
       value: |
@@ -107,15 +94,7 @@ body:
         #### Error logs
 
         The error logs are as follows: ...
+
+        ### The screenshots are as belows:
     validations:
       required: true
-
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Description of the Bug - Screenshots
-      description: "Please paste any screenshots of the error or unexpected behavior here. You can drag and drop images directly into this field."
-      value: |
-        The screenshots are as belows:
-    validations:
-      required: false
