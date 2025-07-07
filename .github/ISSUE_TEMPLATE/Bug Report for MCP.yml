@@ -110,15 +110,13 @@ body:
 
         The results are expected to be ...
 
-        #### Attempts to fix
+        #### Actual behaviours
 
-        I have tried several ways to fix this, including:
-        1. adjusting the sampling parameters, but ...
-        2. prompt engineering, but ...
+        The actual outputs are as follows: ...
 
-        #### Anything else helpful for investigation
+        #### Error logs
 
-        I find that this problem also happens to ... 
+        The error logs are as follows: ...
     validations:
       required: true
 
