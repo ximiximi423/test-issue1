@@ -26,12 +26,12 @@ body:
         Please briefly describe the scenario, including the framework or the platform, 
       placeholder: "ex: Minimax-M1 cannot be called as MCP tools. "
     validations:
-      required: true
+      required: false
 
   - type: checkboxes
     id: problem-validation
     attributes:
-      label: Confirmations
+      label: Is this bug known and solvable?
       options:
         - label: "I have followed the GitHub READMEs for [`Minimax-MCP`](https://github.com/MiniMax-AI/MiniMax-MCP) and [`Minimax-MCP-JS`](https://github.com/MiniMax-AI/MiniMax-MCP-JS)."
           required: true
