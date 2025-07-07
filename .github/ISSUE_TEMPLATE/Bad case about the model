@@ -1,0 +1,128 @@
+name: Bad Case Report
+description: Report a bug related to MCP and API tasks to help us reproduce and fix the problem.
+title: "[BadCase]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to our project by reporting a bug! To help us understand and resolve the issue as quickly as possible, please provide the following details.
+
+  ---
+
+  - type: input
+    id: models-used # Added ID for clarity
+    attributes:
+      label: Basic Information - Models Used
+      description: |
+        Please list the model used, e.g., MiniMax-M1, speech-02-hd, etc.
+        (Note: You can refer to our models at [HuggingFace](https://huggingface.co/MiniMaxAI) or [the official site](https://www.minimax.io/platform_overview) for more details.)
+      placeholder: "ex: MiniMax-M1，speech-02-hd"
+    validations:
+      required: true
+
+  - type: input
+    id: scenario-description
+    attributes:
+      label: Basic Information - Scenario Description
+      description: |
+        Please briefly describe the scenario, including the framework or the platform.
+      placeholder: "ex: Minimax-M1 return the error related to xxx."
+    validations:
+      required: false
+
+  ---
+
+  - type: checkboxes
+    id: problem-validation
+    attributes:
+      label: Is this badcase known and solvable?
+      options:
+        - label: "I have followed the GitHub README of the model and found no duplicates in existing issues."
+          required: true
+        - label: "I have checked Minimax documentation and found no solution."
+          required: true
+
+  ---
+
+  - type: textarea
+    id: environment-info # Added ID for clarity
+    attributes:
+      label: Information about environment
+      description: |
+        (Include software versions, OS, GPUs if applicable)
+      placeholder: |
+        For example:
+        - OS: Ubuntu 24.04
+        - Python: Python 3.11
+        - PyTorch: 2.6.0+cu124
+    validations:
+      required: true
+
+  - type: textarea
+    id: call-execution-info # Consolidated field for call type and details
+    attributes:
+      label: Call & Execution Information
+      description: |
+        Please describe how you are interacting with the model and provide the relevant details in the box below:
+
+        ---
+        **Call Type**: (e.g., API Call, Deployment Call)
+        **If API Call**: Please provide the `trace-ID` of the problematic request.
+        **If Deployment Call**: Please provide the command used for deployment or inference.
+      placeholder: |
+        # Example for API Call:
+        Call Type: API Call
+        Trace-ID: abcdef1234567890
+
+        # Example for Deployment Call:
+        Call Type: Deployment Call
+        Deployment Command: python run_inference.py --model my_model --config config.yaml
+      render: bash # Renders content with basic syntax highlighting (useful for commands)
+    validations:
+      required: true # Making this required as it's critical information
+
+  ---
+
+  - type: textarea
+    id: description-of-bug
+    attributes:
+      label: Description
+      description: |
+        Please **describe the bug** you have encountered.
+        The following template is recommended (modify as needed):
+      value: |
+        ### Steps to reproduce
+        The bug can be reproduced with the following steps:
+        1. ...
+        2. ...
+
+        #### Example Input & Output (if applicable)
+        ```
+        # Provide example system/user input and corresponding model output here
+        system: ...
+        user: ...
+        response: ...
+        ```
+
+        ### Expected behavior
+        The results are expected to be: ...
+
+        ### Actual behavior
+        The actual outputs are as follows: ...
+
+        ### Error logs
+        The error logs are as follows:
+        ```
+        # Paste error logs here
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots # Dedicated field for screenshots
+    attributes:
+      label: Screenshots
+      description: "Please paste the screenshots of the related information here."
+    validations:
+      required: true
